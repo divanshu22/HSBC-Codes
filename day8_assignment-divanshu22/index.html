@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Vaccine Form</title>
+
+<link href="style.css" rel="stylesheet"></link>
+
+<script src="index.js">
+
+</script>
+
+<script src="index2.js">
+     
+</script>
+
+</head>
+<body class="def2">
+  <center>
+	<p class="def1"><b>COVID VACCINATION PREFERENCE SURVEY/b></font></p>
+	
+	
+	<form action="RegisterServlet" method="post">
+		<table border="5">
+			<tr>
+				<td>Name</td>
+				<td><input type=text id="name" name="nm" required  minlength="6" pattern="[A-Za-z]{6,}" onkeyup="validatename()" ><div id="result"></div></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td><input type=text id="gen" name="gen" required minlength="4" maxlength="11"></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type="number" id="age" name="age" min="18" max="60"></td>
+			</tr>
+			<tr>
+				<td>Preference</td>
+				<td><input type="radio" id="pre" name="Type_of_vaccine" value="Covaxin">Covaxin</td>
+				<td><input type="radio" id="pre" name="Type_of_vaccine" value="Covishield">Covishield</td>
+			</tr>
+			<tr>
+				
+			<td>	<button  type="button" onclick="testVariable()">Submit</button> <br /></td>
+			</tr>
+    <span id="spanResult">
+
+    </span>
+			
+		</table>
+	</form>
+  </center>
+</body>
+</html>
