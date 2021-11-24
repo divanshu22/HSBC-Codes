@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Covid Vaccination Preference Survey</title>
+<link rel="stylesheet" href="appstyles.css">
+<script src="helper.js"></script>
+<script type="text/javascript">
+
+function getData(){
+	var array =[];
+	document.getElementById("loading"),innerHTML = "loading";
+	httpRequest=new XMLHttpRequest();
+	if(httpsRequest){
+		console.log('Unable to create XMLHttp instance');
+		return false;
+	}
+	httpRequest.open("GET","covisheild.json");
+	httpRequest.open("GET","covaxin.json");
+	httpRequest.send();
+	httpRequest.onreadystatechange=function(){
+		if(httpRequest.readyState===XMLHttpRequest.DONE){
+			document.getElementsById("loading").innerHTML="";
+			}
+		}
+	}
+</script>
+</head>
+<body>
+
+    <fieldset>
+       
+<form name="covidvaccine" onsubmit= "return validateForm()" action="" method="post">
+<table>
+    <h3>Covid Vaccination Preference Survey</h3>
+    <div class = "row">
+        <label>Name</label>
+  <input type="text" name="nm" required minlength="6">
+  <div class="error" id="nameErr"></div>
+  </div>
+  <div class = "row">
+    <label>Gender</label>
+  <input type="text" name="gender">
+  <div class="error" id="GenderErr"></div>
+  </div>
+</div>
+<div class = "row">
+  <label>Age</label>
+  <input type="number" name="age" min="18" max="60">
+  <div class="error" id="AgeErr"></div>
+  </div>
+</div>
+<div class = "row">
+  <label>Preference</label>
+  <div class "form-inline">
+  <input type="radio" name="Preference" id="vaccine"><label for="covaxin">Covaxin</label>
+  <input type="radio" name="Preference" id="vaccine"><label for="covishield">Covishield</label>
+  <div>
+      </div>
+  
+  
+    </div>
+    <div class = "row">
+    
+  <button type="submit" name="btn" value="submit">Submit </button>
+  </div>
+</div>  
+</form>
+<hr />
+<h3>Find all vaccination details</h3>
+<a href = "#" onClick= "CovidFindAllServlet()">All details</a>
+<hr />
+<h3>Find vaccination details by name</h3>
+<form action ="CovidFindByName" method="post">
+Name<input type = "text" name="nm"><br />
+<input type="submit" value="search">
+</form>
+</body>
+</html>

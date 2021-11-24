@@ -1,0 +1,9 @@
+[
+	{
+	"name":"covaxin", 
+	"seconddose":"28 days", 
+	"duration": "11am", 
+	"sideeffects":["fever", "headache"], 
+	"precautions":["Paracetamol for fever","consult doctor"]
+	}	
+]

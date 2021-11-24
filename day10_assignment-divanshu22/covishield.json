@@ -1,0 +1,8 @@
+[
+	{"name":"covishield", 
+	"seconddose":"84 days", 
+	"duration": "10am", 
+	"sideeffects":["fever", "headache"], 
+	"precautions":["Paracetamol for fever","consult doctor"]}
+	
+]
